@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import{ useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import { AluraQuizLogo } from "../components/AluraquizLogo";
 import { Card } from "../components/Card";
@@ -17,82 +17,103 @@ const answerStates = {
   SUCCESS: "SUCCESS",
 } as const;
 
-export default function GameScreen(){
+export default function GameScreen() {
   const router = useRouter();
   const [answerState, setAnswerState] = React.useState<keyof typeof answerStates>(answerStates.DEFAULT);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [userAnswers, setUserAnswers] = React.useState([]);
   const questionNumber = currentQuestion + 1;
-  const [userAnswers, setUserAnswers] = React.useState<boolean[]>([]);
   const question = questions[currentQuestion];
   const isLastQuestion = questionNumber === questions.length;
 
+  React.useEffect(() => {
+    if(isLastQuestion) {
+      const totalPoints = userAnswers.reduce((_totalPoints, currentAnswer) => {
+        if(currentAnswer === true) return _totalPoints + 1;
+        return _totalPoints;
+      }, 0);
+
+      // DESAFIO: Pegar o nome do usuário definido na tela anterior e mostrar na tela final
+      alert(`Você concluiu o desafio! e acertou ${totalPoints}`);
+      router.push("/");
+      return;
+    }
+  }, [userAnswers]);
+
   return (
-    <main className={pageStyles.screen} style={{flex: 1, backgroundImage: `url("${question.image}")`,}}>
+    <main
+      className={pageStyles.screen}
+      style={{
+        flex: 1,
+        backgroundImage: `url("${question.image}")`,
+      }}
+    >
       <section className={pageStyles.container}>
-      <div
+        <div
           style={{
-            maxWidth:"350px",
             display: "flex",
             justifyContent: "center",
-            marginBottom: "24px",
+            marginBottom: "24px"
           }}
         >
           <AluraQuizLogo />
         </div>
-      <Card headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}> 
-
-        <h1>{question.title}</h1>
-
-          <p>{question.description}
+        <Card
+          headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}
+        >
+          <h1>
+            {question.title}
+          </h1>
+          <p>
+            {question.description}
           </p>
-          
-          <form onSubmit={(event) => {
-            event.preventDefault();
-            const $questionsInfo = event.target as HTMLFormElement;
-            const formData = new FormData ($questionsInfo);
-            const { alternative } = Object.fromEntries(formData.entries());
-            
-            const isCorrectAnswer = alternative === question.answer;
-            if (isCorrectAnswer) {
-              setUserAnswers([
-                ...userAnswers,
-                true
-              ]);
-              setAnswerState(answerStates.SUCCESS);
-            }
-            if (!isCorrectAnswer) {
-              setUserAnswers([
-                ...userAnswers,
-                false
-              ]);
-              setAnswerState(answerStates.ERROR);
-            }
+          <form
+            style={{
+              marginTop: "24px", 
+            }}
+            onSubmit={(event) => {
+              event.preventDefault();
+              const $questionInfo = event.target as HTMLFormElement;
+              const formData = new FormData($questionInfo);
+              const { alternative } = Object.fromEntries(formData.entries());
 
-            setTimeout(() => {
-              if(isLastQuestion){
-                const totalPoints = userAnswers.reduce((_totalPoints, currentAnswer) =>{
-                  
-                  if(currentAnswer === true)return _totalPoints + 1;
-                  return _totalPoints;
-                }, 0);
-                
-                alert (`Você concluiu o desafio! E acertou ${totalPoints}`)
-                router.push("/");
-                return;
+              const isCorrectAnswer = alternative === question.answer;
+              if (isCorrectAnswer) {
+                setUserAnswers([
+                  ...userAnswers,
+                  true
+                ]);
+                setAnswerState(answerStates.SUCCESS);
               }
-              setCurrentQuestion(currentQuestion + 1);
-              setAnswerState(answerStates.DEFAULT);
-            }, 2000)
-
-            //setCurrentQuestion(currentQuestion + 1)
-          }}>
-
-            {question.alternatives.map((alternative, index) =>(
-            <Alternative  key={alternative + index}
-            label={alternative}
-            order={index}/>
+              if (!isCorrectAnswer) {
+                setUserAnswers([
+                  ...userAnswers,
+                  false
+                ]);
+                setAnswerState(answerStates.ERROR);
+              }
+              setTimeout(() => {
+                if(isLastQuestion) return;
+                
+                setCurrentQuestion(currentQuestion + 1);
+                setAnswerState(answerStates.DEFAULT);
+              }, 2000);
+            }}
+          >
+            {question.alternatives.map((alternative, index) => (
+              <div
+                key={alternative + index}
+                style={{
+                  marginBottom: "8px",
+                }}
+              >
+                <Alternative
+                  label={alternative}
+                  order={index}
+                />
+              </div>
             ))}
-               {answerState === answerStates.DEFAULT && (
+            {answerState === answerStates.DEFAULT && (
               <button>
                 Confirmar
               </button>
@@ -104,12 +125,14 @@ export default function GameScreen(){
               {answerState === answerStates.SUCCESS && (
                 "✅"
               )}
-              </p>
+            </p>
           </form>
-      </Card>
-      <Footer/>
+        </Card>
+        <Footer />
       </section>
     </main>
-  )
+  );
 }
 
+// Desafio: Criar um componente genérico que representa nossa tela
+// Desafio: Criar a tela de resultados quando tiverem "acabado" as questões

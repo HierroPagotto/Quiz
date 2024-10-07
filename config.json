@@ -2,63 +2,63 @@
     "questions": [
       {
         "image": "/images/1.png",
-        "title": "Pergunta",
-        "description": "Descrição",
+        "title": "Qual o unico planeta que NÃO é anão?",
+        "description": "Considerando apenas planetas dos sistema solar.",
         "alternatives": [
-          "A1",
-          "A2",
-          "A3",
-          "A4"
+          "Plutão.",
+          "Éris.",
+          "Makemake.",
+          "Saturno."
         ], 
       "answer": "3"
       },
       {
         "image": "/images/2.png",
-        "title": "Pergunta 2",
-        "description": "Descrição 2",
+        "title": "Onde fica localizado o Monte Everest?",
+        "description": "Apenas uma alternativa está correta.",
         "alternatives": [
-          "A1",
-          "A2",
-          "A3",
-          "A4"
+          "Paquistão / China (Xinjiang).",
+          "Nepal / China (Tibete).",
+          "Chile.",
+          "Canadá (Yukon)."
         ], 
-      "answer": "2"
+      "answer": "1"
       },
       {
         "image": "/images/3.png",
-        "title": "Pergunta 3",
-        "description": "Descrição 3",
+        "title": "A América do Sul é banhada por quais oceanos?",
+        "description": "Apenas uma alternativa está correta.",
         "alternatives": [
-          "A1",
-          "A2",
-          "A3",
-          "A4"
+          "Pacífico e Índico.",
+          "Atlântico e Índico.",
+          "Pacífico e Atlântico.",
+          "Apenas o Atlântico."
         ], 
       "answer": "2"
       },
       {
         "image": "/images/4.png",
-        "title": "Pergunta 4",
-        "description": "Descrição 4",
+        "title": "Qual o menor pais da Europa?",
+        "description": "Considere apenas Paises da Europa.",
         "alternatives": [
-          "A1",
-          "A2",
-          "A3",
-          "A4"
+          "Vaticano.",
+          "Mônaco.",
+          "Malta.",
+          "Liechtenstein."
         ], 
-      "answer": "2"
+      "answer": "0"
       },
       {
         "image": "/images/5.png",
-        "title": "Pergunta 5",
-        "description": "Descrição 5",
+        "title": "Qual o maior oceano da Terra?",
+        "description": "Apenas uma alternativa está correta.",
         "alternatives": [
-          "A1",
-          "A2",
-          "A3",
-          "A4"
+          "Índico.",
+          "Pacífico.",
+          "Atlântico.",
+          "Nenhum dos anteriores."
         ], 
-      "answer": "2"
+      "answer": "1"
       }
     ]
   }

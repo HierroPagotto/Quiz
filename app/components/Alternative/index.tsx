@@ -6,7 +6,6 @@ interface AlternativeProps {
 }
 
 export function Alternative(props: AlternativeProps){
-  // DESAFIO: Fazer com que ao apertar ENTER ou Espaço a alternativa seja selecionada
   return (
     <label className={styles.component}>
           <input type="radio" 
@@ -17,3 +16,4 @@ export function Alternative(props: AlternativeProps){
           </label>
   );
 }
+ // DESAFIO: Fazer com que ao apertar ENTER ou Espaço a alternativa seja selecionada
