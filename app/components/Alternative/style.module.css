@@ -20,6 +20,6 @@
     display: none;
   }
   .input:checked ~ .component {
-    background-color: var(--primary);
+    background-color: rgb(60, 97, 184);
     opacity: 1;
   } 

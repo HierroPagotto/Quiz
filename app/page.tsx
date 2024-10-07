@@ -25,21 +25,23 @@ export default function Page() {
         </div>
 
         <Card
-          headerTitle="Teste suas habilidades"
+          headerTitle="Teste seus conhecimentos!"
         >
           <p style={{ marginBottom: "32px" }}>
-            Teste os seus conhecimentos sobre o universo Marvel e divirta-se criando o seu AluraQuiz!
+            Teste os seus conhecimentos sobre o planeta Terra!
           </p>
           <form
             onSubmit={(event) => {
               event.preventDefault();
 
-              const name = "Mario";
+
+              const name = "";
               router.push(`/game?player=${name}`)
             }}
           >
             <div style={{ marginBottom: "24px" }}>
               <input
+                id="nome"
                 type="text"
                 placeholder="Diz aí seu nome pra jogar :)"
                 name="playerName"
