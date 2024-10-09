@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { AluraQuizLogo } from "../components/AluraquizLogo";
@@ -19,6 +19,7 @@ const answerStates = {
 
 export default function GameScreen() {
   const router = useRouter();
+  const [name, setName] = useState("");
   const [answerState, setAnswerState] = React.useState<keyof typeof answerStates>(answerStates.DEFAULT);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [userAnswers, setUserAnswers] = React.useState([]);
@@ -26,16 +27,25 @@ export default function GameScreen() {
   const question = questions[currentQuestion];
   const isLastQuestion = questionNumber === questions.length;
 
-  React.useEffect(() => {
-    if(isLastQuestion) {
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const playerName = queryParams.get("player");
+    if (playerName) {
+      setName(playerName);
+      localStorage.setItem("playerName", playerName);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isLastQuestion) {
       const totalPoints = userAnswers.reduce((_totalPoints, currentAnswer) => {
-        if(currentAnswer === true) return _totalPoints + 1;
+        if (currentAnswer === true) return _totalPoints + 1;
         return _totalPoints;
       }, 0);
 
-      // DESAFIO: Pegar o nome do usuário definido na tela anterior e mostrar na tela final
-      alert(`Você concluiu o desafio! e acertou ${totalPoints}`);
-      router.push("/");
+      localStorage.setItem("correctAnswers", totalPoints.toString());
+
+      router.push("/result");
       return;
     }
   }, [userAnswers]);
@@ -133,6 +143,3 @@ export default function GameScreen() {
     </main>
   );
 }
-
-// Desafio: Criar um componente genérico que representa nossa tela
-// Desafio: Criar a tela de resultados quando tiverem "acabado" as questões
