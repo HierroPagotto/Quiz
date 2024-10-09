@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { AluraQuizLogo } from "../components/AluraquizLogo";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
-import pageStyles from "../page.module.css";
+import pageStyles from "./result.style.module.css";
 
 export default function ResultScreen() {
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function ResultScreen() {
     <main className={pageStyles.screen}>
       <section className={pageStyles.container}>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-          <AluraQuizLogo />
+        <AluraQuizLogo />
         </div>
         <Card headerTitle="Resultado do Quiz">
           <h1>{playerName}, você acertou {correctAnswers} respostas!</h1>
