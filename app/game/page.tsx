@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-import { AluraQuizLogo } from "../components/AluraquizLogo";
+import logog from "../../public/images/logog.png";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
 import pageStyles from "../page.module.css";
@@ -65,9 +65,10 @@ export default function GameScreen() {
             justifyContent: "center",
             marginBottom: "24px"
           }}
-        >
-           <AluraQuizLogo />
-        </div>
+          onClick={() => router.push('/')}
+          >
+            <img src={logog.src} alt="Logo" className={pageStyles.logo} style={{ cursor: 'pointer' }} />
+          </div>
         <Card
           headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}
         >

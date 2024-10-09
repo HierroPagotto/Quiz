@@ -1,9 +1,15 @@
-.footer{
+.footer {
     margin-top: 24px;
     display: flex;
-    gap:22px;
-}
-
-.footer p{
+ 
+    justify-items: center;
+  }
+  
+  .footer p {
     font-weight: bold;
-}
+  }
+
+  .footer .logo{
+    width: 120px ;
+    height: 55px;
+  } 

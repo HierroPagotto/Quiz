@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import { AluraQuizLogo } from "../components/AluraquizLogo";
+import logog from "../../public/images/logog.png";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
 import pageStyles from "./result.style.module.css";
@@ -23,7 +23,7 @@ export default function ResultScreen() {
     <main className={pageStyles.screen}>
       <section className={pageStyles.container}>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-        <AluraQuizLogo />
+        <img src={logog.src} alt="Logo" className={pageStyles.logo} />
         </div>
         <Card headerTitle="Resultado do Quiz">
           <h1>{playerName}, você acertou {correctAnswers} respostas!</h1>
