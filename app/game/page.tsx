@@ -66,7 +66,7 @@ export default function GameScreen() {
             marginBottom: "24px"
           }}
         >
-          <AluraQuizLogo />
+           <AluraQuizLogo />
         </div>
         <Card
           headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}
@@ -79,7 +79,7 @@ export default function GameScreen() {
           </p>
           <form
             style={{
-              marginTop: "24px", 
+              marginTop: "24px",
             }}
             onSubmit={(event) => {
               event.preventDefault();
@@ -103,31 +103,29 @@ export default function GameScreen() {
                 setAnswerState(answerStates.ERROR);
               }
               setTimeout(() => {
-                if(isLastQuestion) return;
-                
+                if (isLastQuestion) return;
+
                 setCurrentQuestion(currentQuestion + 1);
                 setAnswerState(answerStates.DEFAULT);
               }, 2000);
             }}
           >
             {question.alternatives.map((alternative, index) => (
-              <div
-                key={alternative + index}
-                style={{
-                  marginBottom: "8px",
-                }}
-              >
+              <div key={alternative + index} style={{ marginBottom: "8px" }}>
                 <Alternative
                   label={alternative}
                   order={index}
+                  onSelect={(order) => {
+                    const selectedAlternative = `alternative-${order}`;
+                    const input = document.getElementById(selectedAlternative) as HTMLInputElement;
+                    if (input) {
+                      input.checked = true;
+                    }
+                  }}
                 />
               </div>
             ))}
-            {answerState === answerStates.DEFAULT && (
-              <button>
-                Confirmar
-              </button>
-            )}
+            {answerState === answerStates.DEFAULT && <button>Confirmar</button>}
             <p style={{ textAlign: "center" }}>
               {answerState === answerStates.ERROR && (
                 "❌"

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
 import { AluraQuizLogo } from "./components/AluraquizLogo";
 import { Footer } from "./components/Footer";
 import { Card } from "./components/Card";
