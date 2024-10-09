@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { AluraQuizLogo } from "./components/AluraquizLogo";
+import logog from "../public/images/logog.png";
 import { Footer } from "./components/Footer";
 import { Card } from "./components/Card";
 
@@ -27,7 +27,7 @@ export default function Page() {
             marginBottom: "24px",
           }}
         >
-          <AluraQuizLogo />
+          <img src={logog.src} alt="Logo" className={pageStyles.logo} />
         </div>
 
         <Card headerTitle="Teste seus conhecimentos!">
