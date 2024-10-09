@@ -1,11 +1,8 @@
-/* CSS Theme*/
 :root{
     --primary:#3f51B5;
     --bg: #1d3557;
     --text: #ffffff;
 }
-
-/* Reset*/
 
 *{
     padding: 0;
