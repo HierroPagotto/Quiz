@@ -10,6 +10,7 @@ const quizzes = [
   { id: 1, title: "Quiz sobre Geografia" },
   { id: 2, title: "Quiz sobre História" },
   { id: 3, title: "Quiz sobre Ciências" },
+  { id: 4, title: "Quiz sobre Academia" },
 ];
 
 export default function QuizzesPage() {
@@ -19,10 +20,15 @@ export default function QuizzesPage() {
     const playerName = localStorage.getItem("playerName");
     if (quizId === 1) {
       router.push(`/game?quiz=geography&player=${playerName}`);
-    } else if (quizId === 2) {
+    } 
+    else if (quizId === 2) {
       router.push(`/game?quiz=history&player=${playerName}`);
-    } else if (quizId === 3) {
+    } 
+    else if (quizId === 3) {
       router.push(`/game?quiz=science&player=${playerName}`);
+    } 
+    else if (quizId === 4) {
+      router.push(`/game?quiz=gym&player=${playerName}`);
     }
   };
 

@@ -13,6 +13,7 @@ const questionsConfig = {
   geography: config.geographyQuestions,
   history: config.historyQuestions,
   science: config.scienceQuestions,
+  gym: config.gymQuestions,
 };
 
 const answerStates = {
@@ -47,7 +48,7 @@ export default function GameScreen() {
     if (currentQuestion >= questions.length && userAnswers.length === questions.length) {
       const totalPoints = userAnswers.reduce((total, currentAnswer) => total + (currentAnswer ? 1 : 0), 0);
       localStorage.setItem("correctAnswers", totalPoints.toString());
-      
+
       router.push("/result");
     }
   }, [userAnswers, currentQuestion, questions.length]);

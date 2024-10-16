@@ -175,5 +175,120 @@
         "Um açúcar formado por glicose e frutose."],
       "answer": "3"
     }
+  ],
+  "gymQuestions": [
+    {
+      "image": "/images/gym/1.png",
+      "title": "Qual a importância do aquecimento antes dos exercícios?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Melhorar a flexibilidade", 
+        "Prevenir lesões e preparar a musculatura", 
+        "Aumentar a força", 
+        "Nada, é opcional"],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/2.png",
+      "title": "Quando o objetivo é hipertrofia, qual a quantidade ideal de proteínas a se consumir por dia? ",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "1.0 a 1.4 g/kg", 
+        "1.2 a 1.6 g/kg", 
+        "1.6 a 2.0 g/kg", 
+        "1.4 a 1.8 g/kg"],
+      "answer": "2"
+    },
+    {
+      "image": "/images/gym/3.png",
+      "title": "Qual a sequencia das modalidades no triathlon?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Natação - Corrida - Ciclismo", 
+        "Corrida - Ciclismo - Natação", 
+        "Natação - Ciclismo - Corrida", 
+        "Ciclismo - Natação - Corrida"],
+      "answer": "2"
+    },
+    {
+      "image": "/images/gym/4.png",
+      "title": "Quais são os efeitos do treinamento de força na densidade óssea?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "O treinamento de força não afeta a densidade óssea.",
+        "Aumenta a densidade óssea.",
+        "Aumenta a densidade óssea apenas em jovens.",
+        "Reduz a densidade óssea para focar em músculos."],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/5.png",
+      "title": "Qual é a principal fonte de energia utilizada durante os exercícios de alta intensidade?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Gorduras.",
+        "Carboidratos.",
+        "Proteínas.",
+        "Vitaminas."],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/6.png",
+      "title": "Quais os principais musculos que atuam no Supino?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Peito - tríceps  - Trapézio", 
+        "Ombro - tríceps  - Grande Dorsal", 
+        "Peito - Ombro - tríceps ", 
+        "Peito - Bíceps - Abdômen"],
+      "answer": "2"
+    },
+    {
+      "image": "/images/gym/7.png",
+      "title": "Escolha a opção que contém somente exercicios de calistenia.",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Barra fixa, Supino reto, Agachamento livre com barra, Paralelas", 
+        "Flexão de braço, Paralelas, Prancha abdominal, Barra fixa", 
+        "Rosca direta, Supino reto, Pulley frente, Paralelas", 
+        "Elevação lateral, Agachamento livre com barra, Crucifixo inclinado, Levantamento terra"],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/8.png",
+      "title": "O que é periodização no treinamento?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Apenas treinar com alta intensidade",
+        "Mudança na intensidade e volume do treino ao longo do tempo",
+        "Treinamento apenas para resistência",
+        "Treinamento sem planejamento"
+    ],
+    "answer": "1"
+    },
+    {
+      "image": "/images/gym/9.png",
+      "title": "Quem é o maior vencedor do Mr. Olympia?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Arnold Schwarzenegger",
+        "Lee Haney",
+        "Dorian Yates",
+        "Ronnie Coleman"
+      ],
+      "answer": "3"
+    },
+    {
+      "image": "/images/gym/10.png",
+      "title": "Qual das opções abaixo é um possível efeito colateral do uso de esteroides anabolizantes?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Aumento da densidade óssea.",
+        "Ginecomastia (aumento das mamas em homens).",
+        "Redução da pressão arterial.",
+        "Melhora na função cardiovascular."],
+  "answer": "1"
+    }
   ]
 }
+  
