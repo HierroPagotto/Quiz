@@ -1,7 +1,7 @@
 {
   "geographyQuestions": [
       {
-        "image": "/images/1.png",
+        "image": "/images/geo/1.png",
         "title": "Qual o unico planeta que NÃO é anão?",
         "description": "Considerando apenas planetas dos sistema solar.",
         "alternatives": [
@@ -13,7 +13,7 @@
       "answer": "3"
       },
       {
-        "image": "/images/2.png",
+        "image": "/images/geo/2.png",
         "title": "Onde fica localizado o Monte Everest?",
         "description": "Apenas uma alternativa está correta.",
         "alternatives": [
@@ -25,7 +25,7 @@
       "answer": "1"
       },
       {
-        "image": "/images/3.png",
+        "image": "/images/geo/3.png",
         "title": "A América do Sul é banhada por quais oceanos?",
         "description": "Apenas uma alternativa está correta.",
         "alternatives": [
@@ -37,7 +37,7 @@
       "answer": "2"
       },
       {
-        "image": "/images/4.png",
+        "image": "/images/geo/4.png",
         "title": "Qual o menor pais da Europa?",
         "description": "Considere apenas Paises da Europa.",
         "alternatives": [
@@ -49,7 +49,7 @@
       "answer": "0"
       },
       {
-        "image": "/images/5.png",
+        "image": "/images/geo/5.png",
         "title": "Qual o maior oceano da Terra?",
         "description": "Apenas uma alternativa está correta.",
         "alternatives": [
@@ -63,6 +63,7 @@
   ],
   "historyQuestions": [
     {
+      "image": "/images/his/1.png",
       "title": "Quem foi o primeiro presidente dos Estados Unidos?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
@@ -73,6 +74,7 @@
       "answer": "1"
     },
     {
+      "image": "/images/his/2.png",
       "title": "Em que ano ocorreu a Revolução Francesa?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
@@ -83,6 +85,7 @@
       "answer": "1"
     },
     {
+      "image": "/images/his/3.png",
       "title": "Quem descobriu a América?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
@@ -93,6 +96,7 @@
       "answer": "3"
     },
     {
+      "image": "/images/his/4.png",
       "title": "Qual foi a causa da Primeira Guerra Mundial?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
@@ -103,38 +107,43 @@
       "answer": "0"
     },
     {
-      "title": "Qual civilização construiu as pirâmides do Egito?",
+      "image": "/images/his/5.png",
+      "title": "Qual é a maior pirâmide do Egito?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
-        "Sumérios", 
-        "Egípcios", 
-        "Gregos", 
-        "Romanos"],
-      "answer": "1"
+        "Pirâmide de Quéops", 
+        "Pirâmide de Quéfren", 
+        "Pirâmide de Miquerinos", 
+        "Pirâmide de Djoser"],
+      "answer": "0"
     }
   ],
   "scienceQuestions": [
     {
-      "title": "Qual é a fórmula química da água?",
+      "image": "/images/cie/1.png",
+      "title": "Qual é a primeira lei de Newton?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
-        "CO²",
-        "O²", 
-        "H²O", 
-        "NaCl"],
+        "Lei da Ação e Reação",
+        "Lei da Inércia",
+        "Lei da Princípio Fundamental da Dinâmica",
+        "Lei da Gravitação Universal"],
       "answer": "2"
     },
     {
-      "title": "Qual é a unidade de medida da força?",
-      "description": "Escolha a resposta correta.",
-      "alternatives": [
-        "Joule", 
-        "Newton", 
-        "Pascal", 
-        "Watt"],
-      "answer": "1"
+        "image": "/images/cie/2.png",
+        "title": "Quem descobriu a gravidade?",
+        "description": "Escolha a resposta correta.",
+        "alternatives": [
+          "Galileu Galilei",
+          "Isaac Newton",
+          "Albert Einstein",
+          "Nicolas Copérnico"
+        ],
+        "answer": "1"
     },
     {
+      "image": "/images/cie/3.png",
       "title": "Qual parte da célula é responsável pela respiração celular?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
@@ -145,6 +154,7 @@
       "answer": "0"
     },
     {
+      "image": "/images/cie/4.png",
       "title": "Qual é a velocidade da luz?",
       "description": "Escolha a resposta correta.",
       "alternatives": [
@@ -155,15 +165,15 @@
       "answer": "0"
     },
     {
-      "title": "Qual elemento químico tem o símbolo 'O'?",
-      "description": "Escolha a resposta correta.",
+      "image": "/images/cie/5.png",
+      "title": "O que é a sacarose?",
+      "description": "Identifique a alternativa correta.",
       "alternatives": [
-        
-        "Oxigênio", 
-        "Ouro", 
-        "Ósmio", 
-        "Oxônio"],
-      "answer": "0"
+        "Um tipo de açúcar encontrado em frutas.",
+        "Um adoçante artificial.",
+        "Um carboidrato complexo.",
+        "Um açúcar formado por glicose e frutose."],
+      "answer": "3"
     }
   ]
 }
