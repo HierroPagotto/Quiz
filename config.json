@@ -1,5 +1,5 @@
 {
-    "questions": [
+  "geographyQuestions": [
       {
         "image": "/images/1.png",
         "title": "Qual o unico planeta que NÃO é anão?",
@@ -17,8 +17,8 @@
         "title": "Onde fica localizado o Monte Everest?",
         "description": "Apenas uma alternativa está correta.",
         "alternatives": [
-          "Paquistão / China (Xinjiang).",
-          "Nepal / China (Tibete).",
+          "Paquistão / China (Xinjiang).", 
+          "Nepal / China (Tibete).", 
           "Chile.",
           "Canadá (Yukon)."
         ], 
@@ -29,9 +29,9 @@
         "title": "A América do Sul é banhada por quais oceanos?",
         "description": "Apenas uma alternativa está correta.",
         "alternatives": [
-          "Pacífico e Índico.",
-          "Atlântico e Índico.",
-          "Pacífico e Atlântico.",
+          "Pacífico e Índico.", 
+          "Atlântico e Índico.", 
+          "Pacífico e Atlântico.", 
           "Apenas o Atlântico."
         ], 
       "answer": "2"
@@ -41,9 +41,9 @@
         "title": "Qual o menor pais da Europa?",
         "description": "Considere apenas Paises da Europa.",
         "alternatives": [
-          "Vaticano.",
-          "Mônaco.",
-          "Malta.",
+          "Vaticano.", 
+          "Mônaco.", 
+          "Malta.", 
           "Liechtenstein."
         ], 
       "answer": "0"
@@ -53,12 +53,117 @@
         "title": "Qual o maior oceano da Terra?",
         "description": "Apenas uma alternativa está correta.",
         "alternatives": [
-          "Índico.",
-          "Pacífico.",
-          "Atlântico.",
+          "Índico.", 
+          "Pacífico.", 
+          "Atlântico.", 
           "Nenhum dos anteriores."
         ], 
       "answer": "1"
-      }
-    ]
-  }
+    }
+  ],
+  "historyQuestions": [
+    {
+      "title": "Quem foi o primeiro presidente dos Estados Unidos?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Abraham Lincoln", 
+        "George Washington", 
+        "Thomas Jefferson", 
+        "John Adams"],
+      "answer": "1"
+    },
+    {
+      "title": "Em que ano ocorreu a Revolução Francesa?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "1776", 
+        "1789", 
+        "1812", 
+        "1865"],
+      "answer": "1"
+    },
+    {
+      "title": "Quem descobriu a América?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Marco Polo", 
+        "Vasco da Gama", 
+        "Ferdinando Magalhães", 
+        "Cristóvão Colombo"],
+      "answer": "3"
+    },
+    {
+      "title": "Qual foi a causa da Primeira Guerra Mundial?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Tensão entre potências", 
+        "Crise econômica", 
+        "Imperialismo", 
+        "Revolução Industrial"],
+      "answer": "0"
+    },
+    {
+      "title": "Qual civilização construiu as pirâmides do Egito?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Sumérios", 
+        "Egípcios", 
+        "Gregos", 
+        "Romanos"],
+      "answer": "1"
+    }
+  ],
+  "scienceQuestions": [
+    {
+      "title": "Qual é a fórmula química da água?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "CO²",
+        "O²", 
+        "H²O", 
+        "NaCl"],
+      "answer": "2"
+    },
+    {
+      "title": "Qual é a unidade de medida da força?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Joule", 
+        "Newton", 
+        "Pascal", 
+        "Watt"],
+      "answer": "1"
+    },
+    {
+      "title": "Qual parte da célula é responsável pela respiração celular?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Mitocôndria", 
+        "Núcleo", 
+        "Ribossomo", 
+        "Lisossomo"],
+      "answer": "0"
+    },
+    {
+      "title": "Qual é a velocidade da luz?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "300.000 km/s", 
+        "150.000 km/s", 
+        "400.000 km/s", 
+        "1.000 km/s"],
+      "answer": "0"
+    },
+    {
+      "title": "Qual elemento químico tem o símbolo 'O'?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        
+        "Oxigênio", 
+        "Ouro", 
+        "Ósmio", 
+        "Oxônio"],
+      "answer": "0"
+    }
+  ]
+}

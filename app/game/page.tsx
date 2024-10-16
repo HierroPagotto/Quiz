@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import logog from "../../public/images/logog.png";
 import { Card } from "../components/Card";
@@ -9,7 +9,11 @@ import pageStyles from "../page.module.css";
 import config from "../../config.json";
 import { Alternative } from "../components/Alternative";
 
-const questions = config.questions;
+const questionsConfig = {
+  geography: config.geographyQuestions,
+  history: config.historyQuestions,
+  science: config.scienceQuestions,
+};
 
 const answerStates = {
   DEFAULT: "DEFAULT",
@@ -19,17 +23,20 @@ const answerStates = {
 
 export default function GameScreen() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const quizType = searchParams.get("quiz");
+  const questions = questionsConfig[quizType] || [];
+
   const [name, setName] = useState("");
-  const [answerState, setAnswerState] = React.useState<keyof typeof answerStates>(answerStates.DEFAULT);
-  const [currentQuestion, setCurrentQuestion] = React.useState(0);
-  const [userAnswers, setUserAnswers] = React.useState([]);
+  const [answerState, setAnswerState] = useState<keyof typeof answerStates>(answerStates.DEFAULT);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [userAnswers, setUserAnswers] = useState<boolean[]>([]);
+
   const questionNumber = currentQuestion + 1;
-  const question = questions[currentQuestion];
-  const isLastQuestion = questionNumber === questions.length;
+  const question = questions.length > 0 ? questions[currentQuestion] : null;
 
   useEffect(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const playerName = queryParams.get("player");
+    const playerName = searchParams.get("player");
     if (playerName) {
       setName(playerName);
       localStorage.setItem("playerName", playerName);
@@ -37,77 +44,54 @@ export default function GameScreen() {
   }, []);
 
   useEffect(() => {
-    if (isLastQuestion) {
-      const totalPoints = userAnswers.reduce((_totalPoints, currentAnswer) => {
-        if (currentAnswer === true) return _totalPoints + 1;
-        return _totalPoints;
-      }, 0);
-
+    if (currentQuestion >= questions.length && userAnswers.length === questions.length) {
+      const totalPoints = userAnswers.reduce((total, currentAnswer) => total + (currentAnswer ? 1 : 0), 0);
       localStorage.setItem("correctAnswers", totalPoints.toString());
-
+      
       router.push("/result");
-      return;
     }
-  }, [userAnswers]);
+  }, [userAnswers, currentQuestion, questions.length]);
+
+  if (!question) {
+    return <p>Loading questions...</p>;
+  }
 
   return (
-    <main
-      className={pageStyles.screen}
-      style={{
-        flex: 1,
-        backgroundImage: `url("${question.image}")`,
-      }}
-    >
+    <main className={pageStyles.screen} style={{ flex: 1, backgroundImage: `url("${question.image}")` }}>
       <section className={pageStyles.container}>
         <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "24px"
-          }}
-          onClick={() => router.push('/')}
-          >
-            <img src={logog.src} alt="Logo" className={pageStyles.logo} style={{ cursor: 'pointer' }} />
-          </div>
-        <Card
-          headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}
-        >
-          <h1>
-            {question.title}
-          </h1>
-          <p>
-            {question.description}
-          </p>
+          style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer"}}
+          onClick={() => router.push('/')}>
+          <img src={logog.src} alt="Logo" className={pageStyles.logo} style={{ cursor: 'pointer' }} />
+        </div>
+        <Card headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}>
+          <h1>{question.title}</h1>
+          <p>{question.description}</p>
           <form
-            style={{
-              marginTop: "24px",
-            }}
+            style={{ marginTop: "24px" }}
             onSubmit={(event) => {
-              event.preventDefault();
-              const $questionInfo = event.target as HTMLFormElement;
-              const formData = new FormData($questionInfo);
+              event.preventDefault(); 
+
+              if (!(event.target instanceof HTMLFormElement)) {
+                return;
+              }
+
+              const formData = new FormData(event.target);
               const { alternative } = Object.fromEntries(formData.entries());
-
               const isCorrectAnswer = alternative === question.answer;
-              if (isCorrectAnswer) {
-                setUserAnswers([
-                  ...userAnswers,
-                  true
-                ]);
-                setAnswerState(answerStates.SUCCESS);
-              }
-              if (!isCorrectAnswer) {
-                setUserAnswers([
-                  ...userAnswers,
-                  false
-                ]);
-                setAnswerState(answerStates.ERROR);
-              }
-              setTimeout(() => {
-                if (isLastQuestion) return;
 
-                setCurrentQuestion(currentQuestion + 1);
-                setAnswerState(answerStates.DEFAULT);
+              setUserAnswers([...userAnswers, isCorrectAnswer]);
+              setAnswerState(isCorrectAnswer ? answerStates.SUCCESS : answerStates.ERROR);
+
+              setTimeout(() => {
+                if (currentQuestion + 1 >= questions.length) {
+                  const totalPoints = userAnswers.reduce((total, currentAnswer) => total + (currentAnswer ? 1 : 0), 0) + (isCorrectAnswer ? 1 : 0);
+                  localStorage.setItem("correctAnswers", totalPoints.toString());
+                  router.push("/result");
+                } else {
+                  setCurrentQuestion(currentQuestion + 1);
+                  setAnswerState(answerStates.DEFAULT);
+                }
               }, 2000);
             }}
           >
@@ -128,12 +112,8 @@ export default function GameScreen() {
             ))}
             {answerState === answerStates.DEFAULT && <button>Confirmar</button>}
             <p style={{ textAlign: "center" }}>
-              {answerState === answerStates.ERROR && (
-                "❌"
-              )}
-              {answerState === answerStates.SUCCESS && (
-                "✅"
-              )}
+              {answerState === answerStates.ERROR && "❌"}
+              {answerState === answerStates.SUCCESS && "✅"}
             </p>
           </form>
         </Card>

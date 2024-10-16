@@ -11,8 +11,6 @@
         background-image:url("/images/bg.png");
         padding-top: 50px;
         padding-left: 10%;
-        padding-right: 10%;
-        margin-right: 10%;/* talvez vou ter q remover esse*/
     }
     }
 
@@ -27,9 +25,11 @@
     color: inherit;
     font-weight: normal;
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 10px 16px;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    
   }
   
   .inputStyle:focus {
@@ -39,4 +39,3 @@
     outline: none;
     border-color: black;
   }
-  
