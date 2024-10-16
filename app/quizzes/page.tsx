@@ -18,11 +18,11 @@ export default function QuizzesPage() {
   const handleQuizSelect = (quizId) => {
     const playerName = localStorage.getItem("playerName");
     if (quizId === 1) {
-      router.push(`/game?quiz=geography&player=${playerName}`); // Redireciona para o quiz de geografia
+      router.push(`/game?quiz=geography&player=${playerName}`);
     } else if (quizId === 2) {
-      router.push(`/game?quiz=history&player=${playerName}`); // Redireciona para o quiz de história
+      router.push(`/game?quiz=history&player=${playerName}`);
     } else if (quizId === 3) {
-      router.push(`/game?quiz=science&player=${playerName}`); // Redireciona para o quiz de ciências
+      router.push(`/game?quiz=science&player=${playerName}`);
     }
   };
 
