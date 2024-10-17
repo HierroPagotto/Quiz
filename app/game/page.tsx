@@ -37,7 +37,7 @@ export default function GameScreen() {
   const question = questions.length > 0 ? questions[currentQuestion] : null;
 
   useEffect(() => {
-    const playerName = searchParams.get("player") || localStorage.getItem("playerName"); // Prioriza o player da URL
+    const playerName = searchParams.get("player") || localStorage.getItem("playerName"); 
     if (playerName) {
       setName(playerName);
     }

@@ -15,7 +15,7 @@ const quizzes = [
 
 export default function QuizzesPage() {
   const router = useRouter();
-  const playerName = localStorage.getItem("playerName") || ""; // Pega o nome do localStorage
+  const playerName = localStorage.getItem("playerName") || ""; 
 
   const handleQuizSelect = (quizId) => {
     if (quizId === 1) {

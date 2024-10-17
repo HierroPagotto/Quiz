@@ -17,7 +17,7 @@ export default function Page() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    localStorage.setItem("playerName", name); // Salva o nome no localStorage
+    localStorage.setItem("playerName", name); 
     router.push(`/quizzes?player=${name}`);
   };
 

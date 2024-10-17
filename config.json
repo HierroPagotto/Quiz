@@ -126,9 +126,9 @@
       "alternatives": [
         "Lei da Ação e Reação",
         "Lei da Inércia",
-        "Lei da Princípio Fundamental da Dinâmica",
+        "Lei do Princípio Fundamental da Dinâmica",
         "Lei da Gravitação Universal"],
-      "answer": "2"
+      "answer": "1"
     },
     {
         "image": "/images/cie/2.png",
@@ -166,14 +166,14 @@
     },
     {
       "image": "/images/cie/5.png",
-      "title": "O que é a sacarose?",
+      "title": "Qual das opções abaixo representa corretamente a estrutura e função do DNA?",
       "description": "Identifique a alternativa correta.",
       "alternatives": [
-        "Um tipo de açúcar encontrado em frutas.",
-        "Um adoçante artificial.",
-        "Um carboidrato complexo.",
-        "Um açúcar formado por glicose e frutose."],
-      "answer": "3"
+        "O DNA é uma cadeia de aminoácidos que codifica proteínas.",
+        "O DNA é uma molécula de dupla hélice composta por nucleotídeos, responsável por armazenar e transmitir informações genéticas.",
+        "O DNA se encontra exclusivamente no citoplasma das células e não participa da replicação celular.",
+        "O DNA é formado por lipídios e carboidratos, desempenhando papel na energia celular."],
+  "answer": "2"
     }
   ],
   "gymQuestions": [
