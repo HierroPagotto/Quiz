@@ -22,8 +22,9 @@ export default function ResultScreen() {
   return (
     <main className={pageStyles.screen}>
       <section className={pageStyles.container}>
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-        <img src={logog.src} alt="Logo" className={pageStyles.logo} />
+      <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer"}}
+            onClick={() => router.push('/')}>
+          <img src={logog.src} alt="Logo" className={pageStyles.logo} />
         </div>
         <Card headerTitle="Resultado do Quiz">
           <h1>{playerName}, você acertou {correctAnswers} respostas!</h1>
