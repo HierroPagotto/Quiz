@@ -15,9 +15,9 @@ const quizzes = [
 
 export default function QuizzesPage() {
   const router = useRouter();
+  const playerName = localStorage.getItem("playerName") || ""; // Pega o nome do localStorage
 
   const handleQuizSelect = (quizId) => {
-    const playerName = localStorage.getItem("playerName");
     if (quizId === 1) {
       router.push(`/game?quiz=geography&player=${playerName}`);
     } 

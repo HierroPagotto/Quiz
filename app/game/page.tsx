@@ -37,12 +37,12 @@ export default function GameScreen() {
   const question = questions.length > 0 ? questions[currentQuestion] : null;
 
   useEffect(() => {
-    const playerName = searchParams.get("player");
+    const playerName = searchParams.get("player") || localStorage.getItem("playerName"); // Prioriza o player da URL
     if (playerName) {
       setName(playerName);
-      localStorage.setItem("playerName", playerName);
     }
   }, []);
+  
 
   useEffect(() => {
     if (currentQuestion >= questions.length && userAnswers.length === questions.length) {
