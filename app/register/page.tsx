@@ -3,37 +3,38 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import logog from "../public/images/logog.png";
-import { Footer } from "./components/Footer";
-import { Card } from "./components/Card";
+import { Footer } from "../components/Footer";
+import { Card } from "../components/Card";
 
-import pageStyles from "./page.module.css";
+import pageStyles from "../page.module.css";
 
-export default function Page() {
+export default function RegisterPage() {
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
-    localStorage.setItem("playerName", name); 
-    router.push(`/quizzes?player=${name}`);
-  };
 
-  const handleRegister = () => {
-    router.push(`/register`);
+    // Preciso implementar uma verificação do login.
+    // Por agora estou apenas redirecionando para o login.
+    router.push(`/`); 
   };
 
   return (
     <main className={pageStyles.screen} style={{ flex: 1 }}>
       <section className={pageStyles.container}>
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-          <img src={logog.src} alt="Logo" className={pageStyles.logo} />
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer"}}
+            onClick={() => router.push('/')}>
+          <img src="/images/logog.png" alt="Logo" className={pageStyles.logo} />
         </div>
 
-        <Card headerTitle="Login">
-          <form onSubmit={handleSubmit}>
+        <Card headerTitle="Registrar">
+          <p style={{ marginBottom: "32px" }}>Crie sua conta!</p>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          <form onSubmit={handleRegister}>
             <div style={{ marginBottom: "24px" }}>
               <input
                 id="nome"
@@ -67,11 +68,8 @@ export default function Page() {
                 required
               />
             </div>
-            <button type="submit">Entrar</button>
+            <button type="submit">Registrar</button>
           </form>
-          <button id="reg" onClick={handleRegister}>
-              Registrar
-              </button>
         </Card>
         <Footer />
       </section>
