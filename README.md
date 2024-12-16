@@ -2,13 +2,7 @@
 
 To do:
 
-Login:
-Nome de Usuario e senha
-<br>
-Criação de opções de temas de Quiz
-</br>
-Tela com as opções de Quiz
-<br>
+Adicionar o sqlite ou mysql para salvar informações de login e resultados do quiz.
 
 To run:
 <br>
