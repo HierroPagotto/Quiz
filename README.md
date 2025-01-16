@@ -1,6 +1,6 @@
 To do:
 
-Adicionar o sqlite ou mysql para salvar informações de login e resultados do quiz.
+add: Databank to store login information and quiz results.
 
 To run:
 <br>
