@@ -37,4 +37,3 @@ O servidor iniciará em `http://localhost:3000`.
 
 ## Melhorias Futuras
 - [ ] Adicionar banco de dados para armazenar informações de login e resultados do quiz.
-- [ ] Melhorar a interface e responsividade.
