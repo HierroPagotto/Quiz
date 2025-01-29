@@ -1,4 +1,4 @@
-# Projeto Quiz
+# Quiz
 
 ## Descrição
 Este é um projeto de Quiz desenvolvido com **Next.js** e **React**. O objetivo é criar um sistema interativo onde os usuários possam responder a perguntas e visualizar seus resultados.
