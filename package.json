@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "next dev",
     "predeploy": "npm run build",
+    "build": "next build && next export",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
