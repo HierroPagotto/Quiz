@@ -1,0 +1,41 @@
+.screen{
+    background-size: cover;
+    background-position: center center;
+    padding-top: 40px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+@media(min-width: 600px){
+    .screen{
+        background-image:url("/images/bg.png");
+        padding-top: 50px;
+        padding-left: 10%;
+    }
+    }
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 350px;
+}
+}
+
+.inputStyle {
+    background-color: transparent;
+    color: inherit;
+    font-weight: normal;
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    
+  }
+  
+  .inputStyle:focus {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    outline: none;
+    border-color: black;
+  }

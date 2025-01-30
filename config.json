@@ -1,0 +1,294 @@
+{
+  "geographyQuestions": [
+      {
+        "image": "/images/geo/1.png",
+        "title": "Qual o unico planeta que NÃO é anão?",
+        "description": "Considerando apenas planetas dos sistema solar.",
+        "alternatives": [
+          "Plutão.",
+          "Éris.",
+          "Makemake.",
+          "Saturno."
+        ], 
+      "answer": "3"
+      },
+      {
+        "image": "/images/geo/2.png",
+        "title": "Onde fica localizado o Monte Everest?",
+        "description": "Apenas uma alternativa está correta.",
+        "alternatives": [
+          "Paquistão / China (Xinjiang).", 
+          "Nepal / China (Tibete).", 
+          "Chile.",
+          "Canadá (Yukon)."
+        ], 
+      "answer": "1"
+      },
+      {
+        "image": "/images/geo/3.png",
+        "title": "A América do Sul é banhada por quais oceanos?",
+        "description": "Apenas uma alternativa está correta.",
+        "alternatives": [
+          "Pacífico e Índico.", 
+          "Atlântico e Índico.", 
+          "Pacífico e Atlântico.", 
+          "Apenas o Atlântico."
+        ], 
+      "answer": "2"
+      },
+      {
+        "image": "/images/geo/4.png",
+        "title": "Qual o menor pais da Europa?",
+        "description": "Considere apenas Paises da Europa.",
+        "alternatives": [
+          "Vaticano.", 
+          "Mônaco.", 
+          "Malta.", 
+          "Liechtenstein."
+        ], 
+      "answer": "0"
+      },
+      {
+        "image": "/images/geo/5.png",
+        "title": "Qual o maior oceano da Terra?",
+        "description": "Apenas uma alternativa está correta.",
+        "alternatives": [
+          "Índico.", 
+          "Pacífico.", 
+          "Atlântico.", 
+          "Nenhum dos anteriores."
+        ], 
+      "answer": "1"
+    }
+  ],
+  "historyQuestions": [
+    {
+      "image": "/images/his/1.png",
+      "title": "Quem foi o primeiro presidente dos Estados Unidos?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Abraham Lincoln", 
+        "George Washington", 
+        "Thomas Jefferson", 
+        "John Adams"],
+      "answer": "1"
+    },
+    {
+      "image": "/images/his/2.png",
+      "title": "Em que ano ocorreu a Revolução Francesa?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "1776", 
+        "1789", 
+        "1812", 
+        "1865"],
+      "answer": "1"
+    },
+    {
+      "image": "/images/his/3.png",
+      "title": "Quem descobriu a América?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Marco Polo", 
+        "Vasco da Gama", 
+        "Ferdinando Magalhães", 
+        "Cristóvão Colombo"],
+      "answer": "3"
+    },
+    {
+      "image": "/images/his/4.png",
+      "title": "Qual foi a causa da Primeira Guerra Mundial?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Tensão entre potências", 
+        "Crise econômica", 
+        "Imperialismo", 
+        "Revolução Industrial"],
+      "answer": "0"
+    },
+    {
+      "image": "/images/his/5.png",
+      "title": "Qual é a maior pirâmide do Egito?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Pirâmide de Quéops", 
+        "Pirâmide de Quéfren", 
+        "Pirâmide de Miquerinos", 
+        "Pirâmide de Djoser"],
+      "answer": "0"
+    }
+  ],
+  "scienceQuestions": [
+    {
+      "image": "/images/cie/1.png",
+      "title": "Qual é a primeira lei de Newton?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Lei da Ação e Reação",
+        "Lei da Inércia",
+        "Lei do Princípio Fundamental da Dinâmica",
+        "Lei da Gravitação Universal"],
+      "answer": "1"
+    },
+    {
+        "image": "/images/cie/2.png",
+        "title": "Quem descobriu a gravidade?",
+        "description": "Escolha a resposta correta.",
+        "alternatives": [
+          "Galileu Galilei",
+          "Isaac Newton",
+          "Albert Einstein",
+          "Nicolas Copérnico"
+        ],
+        "answer": "1"
+    },
+    {
+      "image": "/images/cie/3.png",
+      "title": "Qual parte da célula é responsável pela respiração celular?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Mitocôndria", 
+        "Núcleo", 
+        "Ribossomo", 
+        "Lisossomo"],
+      "answer": "0"
+    },
+    {
+      "image": "/images/cie/4.png",
+      "title": "Qual é a velocidade da luz?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "300.000 km/s", 
+        "150.000 km/s", 
+        "400.000 km/s", 
+        "1.000 km/s"],
+      "answer": "0"
+    },
+    {
+      "image": "/images/cie/5.png",
+      "title": "Qual das opções abaixo representa corretamente a estrutura e função do DNA?",
+      "description": "Identifique a alternativa correta.",
+      "alternatives": [
+        "O DNA é uma cadeia de aminoácidos que codifica proteínas.",
+        "O DNA é uma molécula de dupla hélice composta por nucleotídeos, responsável por armazenar e transmitir informações genéticas.",
+        "O DNA se encontra exclusivamente no citoplasma das células e não participa da replicação celular.",
+        "O DNA é formado por lipídios e carboidratos, desempenhando papel na energia celular."],
+  "answer": "1"
+    }
+  ],
+  "gymQuestions": [
+    {
+      "image": "/images/gym/1.png",
+      "title": "Qual a importância do aquecimento antes dos exercícios?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Melhorar a flexibilidade", 
+        "Prevenir lesões e preparar a musculatura", 
+        "Aumentar a força", 
+        "Nada, é opcional"],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/2.png",
+      "title": "Quando o objetivo é hipertrofia, qual a quantidade ideal de proteínas a se consumir por dia? ",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "1.0 a 1.4 g/kg", 
+        "1.2 a 1.6 g/kg", 
+        "1.6 a 2.0 g/kg", 
+        "1.4 a 1.8 g/kg"],
+      "answer": "2"
+    },
+    {
+      "image": "/images/gym/3.png",
+      "title": "Qual a sequencia das modalidades no triathlon?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Natação - Corrida - Ciclismo", 
+        "Corrida - Ciclismo - Natação", 
+        "Natação - Ciclismo - Corrida", 
+        "Ciclismo - Natação - Corrida"],
+      "answer": "2"
+    },
+    {
+      "image": "/images/gym/4.png",
+      "title": "Quais são os efeitos do treinamento de força na densidade óssea?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "O treinamento de força não afeta a densidade óssea.",
+        "Aumenta a densidade óssea.",
+        "Aumenta a densidade óssea apenas em jovens.",
+        "Reduz a densidade óssea para focar em músculos."],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/5.png",
+      "title": "Qual é a principal fonte de energia utilizada durante os exercícios de alta intensidade?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Gorduras.",
+        "Carboidratos.",
+        "Proteínas.",
+        "Vitaminas."],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/6.png",
+      "title": "Quais os principais musculos que atuam no Supino?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Peito - tríceps  - Trapézio", 
+        "Ombro - tríceps  - Grande Dorsal", 
+        "Peito - Ombro - tríceps ", 
+        "Peito - Bíceps - Abdômen"],
+      "answer": "2"
+    },
+    {
+      "image": "/images/gym/7.png",
+      "title": "Escolha a opção que contém somente exercicios de calistenia.",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Barra fixa, Supino reto, Agachamento livre com barra, Paralelas", 
+        "Flexão de braço, Paralelas, Prancha abdominal, Barra fixa", 
+        "Rosca direta, Supino reto, Pulley frente, Paralelas", 
+        "Elevação lateral, Agachamento livre com barra, Crucifixo inclinado, Levantamento terra"],
+      "answer": "1"
+    },
+    {
+      "image": "/images/gym/8.png",
+      "title": "O que é periodização no treinamento?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Apenas treinar com alta intensidade",
+        "Mudança na intensidade e volume do treino ao longo do tempo",
+        "Treinamento apenas para resistência",
+        "Treinamento sem planejamento"
+    ],
+    "answer": "1"
+    },
+    {
+      "image": "/images/gym/9.png",
+      "title": "Quem é o maior vencedor do Mr. Olympia?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Arnold Schwarzenegger",
+        "Lee Haney",
+        "Dorian Yates",
+        "Ronnie Coleman"
+      ],
+      "answer": "3"
+    },
+    {
+      "image": "/images/gym/10.png",
+      "title": "Qual das opções abaixo é um possível efeito colateral do uso de esteroides anabolizantes?",
+      "description": "Escolha a resposta correta.",
+      "alternatives": [
+        "Aumento da densidade óssea.",
+        "Ginecomastia (aumento das mamas em homens).",
+        "Redução da pressão arterial.",
+        "Melhora na função cardiovascular."],
+  "answer": "1"
+    }
+  ]
+}
+  
