@@ -6,13 +6,10 @@
   },
   "name": "projeto_quiz",
   "version": "1.0.0",
-  "homepage": "https://HierroPagotto.github.io/Quiz",
   "description": "...",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "next dev"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +17,6 @@
   "devDependencies": {
     "@types/node": "22.7.4",
     "@types/react": "18.3.11",
-    "gh-pages": "^6.3.0",
     "typescript": "5.6.2"
   }
 }

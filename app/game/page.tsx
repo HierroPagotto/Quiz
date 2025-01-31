@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import logog from "../../public/images/logog.png";
@@ -23,9 +23,17 @@ const answerStates = {
 } as const;
 
 export default function GameScreen() {
+  return (
+    <Suspense fallback={<p>Carregando...</p>}>
+      <GameContent />
+    </Suspense>
+  );
+}
+
+function GameContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const quizType = searchParams.get("quiz");
+  const quizType = searchParams.get("quiz") as keyof typeof questionsConfig;
   const questions = questionsConfig[quizType] || [];
 
   const [name, setName] = useState("");
@@ -37,24 +45,26 @@ export default function GameScreen() {
   const question = questions.length > 0 ? questions[currentQuestion] : null;
 
   useEffect(() => {
-    const playerName = searchParams.get("player") || localStorage.getItem("playerName"); 
-    if (playerName) {
-      setName(playerName);
+    if (typeof window !== "undefined") {
+      const playerName = searchParams.get("player") || localStorage.getItem("playerName"); 
+      if (playerName) {
+        setName(playerName);
+      }
     }
-  }, []);
-  
+  }, [searchParams]);
 
   useEffect(() => {
     if (currentQuestion >= questions.length && userAnswers.length === questions.length) {
       const totalPoints = userAnswers.reduce((total, currentAnswer) => total + (currentAnswer ? 1 : 0), 0);
-      localStorage.setItem("correctAnswers", totalPoints.toString());
-
+      if (typeof window !== "undefined") {
+        localStorage.setItem("correctAnswers", totalPoints.toString());
+      }
       router.push("/result");
     }
-  }, [userAnswers, currentQuestion, questions.length]);
+  }, [userAnswers, currentQuestion, questions.length, router]);
 
   if (!question) {
-    return <p>Loading questions...</p>;
+    return <p>Carregando perguntas...</p>;
   }
 
   return (
@@ -73,12 +83,8 @@ export default function GameScreen() {
             onSubmit={(event) => {
               event.preventDefault(); 
 
-              if (!(event.target instanceof HTMLFormElement)) {
-                return;
-              }
-
-              const formData = new FormData(event.target);
-              const { alternative } = Object.fromEntries(formData.entries());
+              const formData = new FormData(event.target as HTMLFormElement);
+              const alternative = formData.get("alternative") as string;
               const isCorrectAnswer = alternative === question.answer;
 
               setUserAnswers([...userAnswers, isCorrectAnswer]);
@@ -87,7 +93,9 @@ export default function GameScreen() {
               setTimeout(() => {
                 if (currentQuestion + 1 >= questions.length) {
                   const totalPoints = userAnswers.reduce((total, currentAnswer) => total + (currentAnswer ? 1 : 0), 0) + (isCorrectAnswer ? 1 : 0);
-                  localStorage.setItem("correctAnswers", totalPoints.toString());
+                  if (typeof window !== "undefined") {
+                    localStorage.setItem("correctAnswers", totalPoints.toString());
+                  }
                   router.push("/result");
                 } else {
                   setCurrentQuestion(currentQuestion + 1);
