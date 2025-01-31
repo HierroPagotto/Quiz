@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import logog from "../public/images/logog.png";
+import logog from "../../public/images/logog.png";
 import { Footer } from "../components/Footer";
 import { Card } from "../components/Card";
+import Image from "next/image";
 
 import pageStyles from "../page.module.css";
 
@@ -28,7 +29,7 @@ export default function RegisterPage() {
       <section className={pageStyles.container}>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer"}}
             onClick={() => router.push('/')}>
-          <img src="/images/logog.png" alt="Logo" className={pageStyles.logo} />
+          <Image src={logog} alt="Logo" className={pageStyles.logo} />
         </div>
 
         <Card headerTitle="Registrar">

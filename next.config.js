@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
     output: 'export',
-}
-
-module.exports = nextConfig
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "hierropagotto.github.io",
+          pathname: "/Quiz/**",  // Permite carregar qualquer imagem dentro do diretório /Quiz/
+        },
+      ],
+    },
+  };
+  

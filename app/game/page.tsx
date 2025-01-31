@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 import logog from "../../public/images/logog.png";
 import { Card } from "../components/Card";
@@ -46,7 +47,7 @@ function GameContent() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const playerName = searchParams.get("player") || localStorage.getItem("playerName"); 
+      const playerName = searchParams.get("player") || localStorage.getItem("playerName");
       if (playerName) {
         setName(playerName);
       }
@@ -71,9 +72,9 @@ function GameContent() {
     <main className={pageStyles.screen} style={{ flex: 1, backgroundImage: `url("${question.image}")` }}>
       <section className={pageStyles.container}>
         <div
-          style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer"}}
+          style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer" }}
           onClick={() => router.push('/')}>
-          <img src={logog.src} alt="Logo" className={pageStyles.logo} style={{ cursor: 'pointer' }} />
+          <Image src={logog} alt="Logo" className={pageStyles.logo} style={{ cursor: "pointer" }} />
         </div>
         <Card headerTitle={`Pergunta ${questionNumber} de ${questions.length}`}>
           <h1>{question.title}</h1>
@@ -81,7 +82,7 @@ function GameContent() {
           <form
             style={{ marginTop: "24px" }}
             onSubmit={(event) => {
-              event.preventDefault(); 
+              event.preventDefault();
 
               const formData = new FormData(event.target as HTMLFormElement);
               const alternative = formData.get("alternative") as string;

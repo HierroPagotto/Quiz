@@ -5,6 +5,7 @@ import logog from "../../public/images/logog.png";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
 import pageStyles from "./result.style.module.css";
+import Image from "next/image";
 
 export default function ResultScreen() {
   const router = useRouter();
@@ -24,7 +25,7 @@ export default function ResultScreen() {
       <section className={pageStyles.container}>
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer"}}
             onClick={() => router.push('/')}>
-          <img src={logog.src} alt="Logo" className={pageStyles.logo} />
+          <Image src={logog} alt="Logo" className={pageStyles.logo} />
         </div>
         <Card headerTitle="Resultado do Quiz">
           <h1>{playerName}, você acertou {correctAnswers} respostas!</h1>

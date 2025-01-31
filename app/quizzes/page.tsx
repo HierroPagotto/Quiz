@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Footer } from "../components/Footer";
 import { Card } from "../components/Card";
+import Image from "next/image";
 import pageStyles from "./quizzes.style.module.css";
 import logog from "../../public/images/logog.png";
 
@@ -35,7 +36,7 @@ export default function QuizzesPage() {
           style={{ display: "flex", justifyContent: "center", marginBottom: "24px", cursor: "pointer" }}
           onClick={() => router.push("/")}
         >
-          <img src={logog.src} alt="Logo" className={pageStyles.logo} />
+          <Image src={logog} alt="Logo" className={pageStyles.logo} />
         </div>
         <Card headerTitle="Teste os seus conhecimentos!">
           <ul style={{ listStyleType: "none", padding: 0 }}>

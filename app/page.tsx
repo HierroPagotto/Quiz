@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import logog from "../public/images/logog.png";
 import { Footer } from "./components/Footer";
 import { Card } from "./components/Card";
+import Image from "next/image";
 
 import pageStyles from "./page.module.css";
 
@@ -29,7 +30,7 @@ export default function Page() {
     <main className={pageStyles.screen} style={{ flex: 1 }}>
       <section className={pageStyles.container}>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-          <img src={logog.src} alt="Logo" className={pageStyles.logo} />
+          <Image src={logog} alt="Logo" className={pageStyles.logo} />
         </div>
 
         <Card headerTitle="Login">
