@@ -36,4 +36,5 @@ npm run dev
 O servidor iniciará em `http://localhost:3000`.
 
 ## Melhorias Futuras
+- [ ] Arrumar Github page.
 - [ ] Adicionar banco de dados para armazenar informações de login e resultados do quiz.
